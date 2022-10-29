@@ -6,7 +6,7 @@ int kuyruk[BOYUT], front = -1, rear = -1;//on ve arka degerlerini sabit -1 sayis
 
 
 void enQueue(int veri){
-    if(rear == BOYUT){
+    if(rear == BOYUT){ //eger son eleman boyuta esitse hata verecek
         printf("OVERFLOW HATASI!!!");
     }else{
         if(front == -1){
@@ -23,7 +23,7 @@ void deQueue(){
         front = -1;
         rear = -1;
     }else{
-        front = front + 1;
+        front = front + 1; //frontu 1 kaydir
     }
 }
 
