@@ -7,17 +7,17 @@
 struct node
 {
     int data;
-    struct node *next;
+    struct node *next; 
 };
 
 struct node *top = NULL;
 
 void push(int veri){
-    struct node *eklenecek = (struct node*)malloc(sizeof(struct node));
-    eklenecek->data = veri;
-    eklenecek->next = NULL;
+    struct node *eklenecek = (struct node*)malloc(sizeof(struct node)); //dugum olusturduk
+    eklenecek->data = veri; //datasi disardan gelecek
+    eklenecek->next = NULL; //sonraki eleman null
     if(top != NULL){
-        eklenecek->next = top;
+        eklenecek->next = top; 
     }
     top = eklenecek;
 }
@@ -26,10 +26,10 @@ void pop(){
     if(top->data == NULL){
         printf("Stack zaten bos!");
     }else{
-        struct node *iter;
-        iter = top;
+        struct node *temp;
+        temp = top;
         top = top->next;
-        free(iter);
+        free(temp);
     }
 }
 
